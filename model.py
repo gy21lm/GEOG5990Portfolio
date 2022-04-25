@@ -1,8 +1,8 @@
 import random
 
 # Set up y0 and x0 variables.
-y0 = 50
-x0 = 50
+y0 = random.randint(0,99)
+x0 = random.randint(0,99)
 
 # Move y0 one step.
 if random.random() < 0.5:
@@ -24,8 +24,8 @@ print(x0)
 
 
 # Set up y1 and x1 variables.
-y1 = 50
-x1 = 50
+y1 = random.randint(0,99)
+x1 = random.randint(0,99)
 
 # Move y1 one step.
 if random.random() < 0.5:

@@ -1,50 +1,52 @@
 import random
 
-# Set up y0 and x0 variables.
-y0 = random.randint(0,99)
-x0 = random.randint(0,99)
+agents = []
+
+# Set up random coordinates (y0 and x0) to be placed in list. 
+agents.append([random.randint(0,99),random.randint(0,99)])
 
 # Move y0 one step.
 if random.random() < 0.5:
-    y0 += 1
+    agents[0][0] += 1
 else:
-    y0 -= 1
+    agents[0][0] -= 1
     
-print(y0)
+print(agents[0][0])
 
 # Move x0 one step.
 if random.random() < 0.5:
-    x0 += 1 
+    agents[0][1] += 1 
 else:
-    x0 -= 1
+    agents[0][1] -= 1
 
-print(x0)
+print(agents[0][1])
+
+print(agents)
 
 
-
-
-# Set up y1 and x1 variables.
-y1 = random.randint(0,99)
-x1 = random.randint(0,99)
+# Set up second set of random coordinates (y1 and x1) to be placed in list. 
+agents.append([random.randint(0,99),random.randint(0,99)])
 
 # Move y1 one step.
 if random.random() < 0.5:
-    y1 += 1
+    agents[1][0] += 1
 else:
-    y1 -= 1
+    agents[1][0] -= 1
     
-print(y1)
+print(agents[1][0])
 
 # Move x1 one step. 
 if random.random() < 0.5:
-    x1 += 1 
+    agents[1][1] += 1 
 else:
-    x1 -= 1
+    agents[1][1] -= 1
 
-print(x1)
+print(agents[1][1])
+
+print(agents)
 
 # Work out pythagorian distance between two points. 
-answer = (((y0 - y1)**2) + ((x0 - x1)**2))**0.5
+answer = (((agents[0][0] - agents[1][0])**2) + ((agents[0][1] - agents[1][1])**2))**0.5
 
 #Print answer.
 print(answer) 

@@ -1,5 +1,8 @@
+# Import modules.
 import random
+import operator 
 
+# Set up agent list. 
 agents = []
 
 # Set up random coordinates (y0 and x0) to be placed in list. 
@@ -24,6 +27,7 @@ print(agents[0][1])
 print(agents)
 
 
+
 # Set up second set of random coordinates (y1 and x1) to be placed in list. 
 agents.append([random.randint(0,99),random.randint(0,99)])
 
@@ -45,8 +49,16 @@ print(agents[1][1])
 
 print(agents)
 
+
+
 # Work out pythagorian distance between two points. 
 answer = (((agents[0][0] - agents[1][0])**2) + ((agents[0][1] - agents[1][1])**2))**0.5
 
 #Print answer.
-print(answer) 
+print(answer)
+
+# Print max y value.
+print(max(agents))
+
+# Print max x value.
+print(max(agents, key=operator.itemgetter(1)))

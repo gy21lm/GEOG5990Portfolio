@@ -1,6 +1,7 @@
 # Import modules.
 import matplotlib.pyplot
 import agentframework
+import csv
 
 def distance_between(agents_row_a, agents_row_b):
     '''Calculate the pythagorian distance between a pair of agents.
@@ -20,6 +21,19 @@ def distance_between(agents_row_a, agents_row_b):
     '''
     return (((agents_row_a.y - agents_row_b.y)**2) 
             + ((agents_row_a.x - agents_row_b.x)**2))**0.5
+
+# Read in data and create environment. 
+with open('in.txt', newline='') as f:
+    reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
+    environment = []
+    for row in reader:
+        rowlist = []
+        for value in row:
+            rowlist.append(value)
+        environment.append(rowlist)
+        
+matplotlib.pyplot.imshow(environment)
+matplotlib.pyplot.show()
 
 # Set up agents.
 num_of_agents = 10

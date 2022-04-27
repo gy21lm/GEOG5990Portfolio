@@ -14,6 +14,18 @@ import matplotlib.pyplot
 import matplotlib.animation
 import agentframework
 import csv
+import requests
+import bs4
+
+# Web scraping. 
+page = requests.get("https://www.geog.leeds.ac.uk/courses/computing/practicals/python/agent-framework/part9/data.html")
+content = page.text 
+soup = bs4.BeautifulSoup(content, 'html.parser')
+td_ys = soup.find_all(attrs={"class" : "y"})
+td_xs = soup.find_all(attrs={"class" : "x"})
+print(td_ys)
+print(td_xs)
+
 
 # Read in data and create environment. 
 with open('in.txt', newline='') as f:
@@ -40,7 +52,9 @@ ax = fig.add_axes([0, 0, 1, 1])
 
 # Make the agents. 
 for i in range(num_of_agents):
-    agents.append(agentframework.Agent(environment, rowlist, agents))
+    y = int(td_ys[i].text)
+    x = int(td_xs[i].text)
+    agents.append(agentframework.Agent(environment, rowlist, agents, y, x))
     
 carry_on = True
 

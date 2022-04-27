@@ -9,10 +9,11 @@ Created on Tue Apr 26 17:56:22 2022
 import random
 
 class Agent():
-    def __init__(self, environment, agents):
-        self._y = random.randint(0,99)
-        self._x = random.randint(0,99)
-        self.environment = environment 
+    def __init__(self, environment, rowlist, agents):
+        self._y = random.randint(0, len(environment))
+        self._x = random.randint(0, len(rowlist))
+        self.environment = environment
+        self.rowlist = rowlist
         self.store = 0
         self.agents = agents
         
@@ -35,15 +36,15 @@ class Agent():
     def move(self):
         #Move one step in y direction.
         if random.random() < 0.5:
-            self.y = (self.y + 1) % 100
+            self.y = (self.y + 1) % len(self.environment)
         else:
-            self.y = (self.y - 1) % 100
+            self.y = (self.y - 1) % len(self.environment)
         
         # Move one step in x direction.
         if random.random() < 0.5:
-            self.x = (self.x + 1) % 100
+            self.x = (self.x + 1) % len(self.rowlist)
         else:
-            self.x = (self.x - 1) % 100
+            self.x = (self.x - 1) % len(self.rowlist)
             
     def eat(self):
         if self.environment[self.y][self.x] > 10:

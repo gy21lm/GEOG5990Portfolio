@@ -9,14 +9,22 @@ Created on Tue Apr 26 17:56:22 2022
 import random
 
 class Agent():
-    def __init__(self, environment, rowlist, agents):
-        self._y = random.randint(0, len(environment))
-        self._x = random.randint(0, len(rowlist))
+    def __init__(self, environment, rowlist, agents, y, x):
         self.environment = environment
         self.rowlist = rowlist
         self.store = 0
         self.agents = agents
         
+        if (y == None):
+            self._y = random.randint(0,len(environment))
+        else:
+            self._y = y 
+            
+        if (x == None):
+            self._x = random.randint(0,len(rowlist))
+        else:
+            self._x = x 
+    
     def gety(self):
         return self._y
     def sety(self, value):

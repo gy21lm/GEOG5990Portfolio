@@ -7,6 +7,9 @@ Created on Wed Apr 27 09:21:44 2022
 
 # Import modules.
 import random
+import tkinter
+import matplotlib
+matplotlib.use('TkAgg') 
 import matplotlib.pyplot
 import matplotlib.animation
 import agentframework
@@ -77,17 +80,21 @@ def gen_function(b = [0]):
     while (carry_on) :
         yield a			# Returns control and waits next call.
         a = a + 1
+    
+def run():
+    animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
+    canvas.draw() 
+
+root = tkinter.Tk() 
+root.wm_title("Model")
         
-animation = matplotlib.animation.FuncAnimation(fig, update, interval = 1, repeat=False, frames=gen_function)
+canvas = matplotlib.backends.backend_tkagg.FigureCanvasTkAgg(fig, master=root)
+canvas._tkcanvas.pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1) 
 
-matplotlib.pyplot.show()
+menu_bar = tkinter.Menu(root)
+root.config(menu=menu_bar)
+model_menu = tkinter.Menu(menu_bar)
+menu_bar.add_cascade(label="Model", menu=model_menu)
+model_menu.add_command(label="Run model", command=run) 
 
-'''
-# Set axes limits and plot agents. 
-matplotlib.pyplot.ylim(0, 99)
-matplotlib.pyplot.xlim(0, 99)
-matplotlib.pyplot.imshow(environment)
-for i in range(num_of_agents):
-    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
-matplotlib.pyplot.show()
-'''
+tkinter.mainloop()

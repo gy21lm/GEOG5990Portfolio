@@ -8,7 +8,7 @@ This project initiates an agent based model which:
 * is contained within a GUI (Graphical User Interface)
 * is initialised with data from the web
 
-The code has created a model containing agents that roam around within an environment, interacting both with each other and with the environment. To help conceptualise this, it could be imagine the agents are sheep roaming around in an environment, such as uneven amounts of grass. At each spot they move to, they 'eat'(store) a little bit of the grass and potentially share their store with any other sheep that are close to them (within their neighbourhood). The animation itself will run until all sheep hold a certain amount of grass (either the default amount or this value can be set via user input). 
+The code has created a model containing agents that roam around within an environment, interacting both with each other and with the environment. To help conceptualise this, it could be imagine the agents are sheep roaming around in an environment, such as uneven amounts of grass. At each spot they move to, they 'eat' (store) a little bit of the grass and potentially share their store with any other sheep that are close to them (within their neighbourhood). The animation itself will run until all sheep hold a certain amount of grass (either the default amount or this value can be set via user input). 
 
 ## CONTENTS LIST  
 * LICENCE.txt - licence for the project 

@@ -1,5 +1,4 @@
-#GEOG5990Porfolio
-------------
+# GEOG5990Porfolio
 ## INTRODUCTION
 This project initiates an agent based model which:
 * builds agents in a space

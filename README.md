@@ -14,7 +14,7 @@ This project initiates an agent based model which:
 * model.py - python script which runs the model
 * agentframework.py - python script which stores the information about the agents
 * in.txt - a text file containing the values of the environment
-* agentframework.html - documentation for agentframework.py
+* [agentframework.html](agentframework.html) - documentation for agentframework.py
 
 ## HOW TO RUN 
 Download model.py, agentframework.py and in.txt into the same directory.

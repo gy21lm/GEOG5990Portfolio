@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module agentframework</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>agentframework</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Clena%5Cdocuments%5Cgithub%5Cgeog5990portfolio%5Cagentframework.py">c:\users\lena\documents\github\geog5990portfolio\agentframework.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Tue&nbsp;Apr&nbsp;26&nbsp;17:56:22&nbsp;2022<br>
+&nbsp;<br>
+@author:&nbsp;Lena</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="agentframework.html#Agent">Agent</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Agent">class <strong>Agent</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Agent">Agent</a>(environment,&nbsp;rowlist,&nbsp;agents,&nbsp;y,&nbsp;x)<br>
+&nbsp;<br>
+Provides&nbsp;methods&nbsp;for&nbsp;agents.&nbsp;<br>
+&nbsp;<br>
+move&nbsp;--&nbsp;agent&nbsp;moves&nbsp;in&nbsp;the&nbsp;y&nbsp;and&nbsp;x&nbsp;direction&nbsp;and&nbsp;'eats'&nbsp;from&nbsp;new&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;environment&nbsp;its&nbsp;positioned&nbsp;on&nbsp;<br>
+eat&nbsp;--&nbsp;agent&nbsp;'eats'&nbsp;the&nbsp;environment&nbsp;it's&nbsp;positioned&nbsp;on<br>
+share_with_neighbours&nbsp;--&nbsp;agent&nbsp;shares&nbsp;its&nbsp;store&nbsp;with&nbsp;another&nbsp;agent&nbsp;if&nbsp;the&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;second&nbsp;agent&nbsp;is&nbsp;within&nbsp;its&nbsp;neighbourhood<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Agent-__init__"><strong>__init__</strong></a>(self, environment, rowlist, agents, y, x)</dt><dd><tt>Initialises&nbsp;the&nbsp;<a href="builtins.html#object">object</a>'s&nbsp;attritbutes&nbsp;when&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;created&nbsp;from<br>
+a&nbsp;class.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+environment&nbsp;--&nbsp;list<br>
+rowlist&nbsp;--&nbsp;list<br>
+agents&nbsp;--&nbsp;list<br>
+y&nbsp;--&nbsp;number<br>
+x&nbsp;--&nbsp;number</tt></dd></dl>
+
+<dl><dt><a name="Agent-delx"><strong>delx</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-dely"><strong>dely</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-distance_between"><strong>distance_between</strong></a>(self, agent)</dt><dd><tt>Calculates&nbsp;the&nbsp;pythagorian&nbsp;distance&nbsp;between&nbsp;two&nbsp;agents.&nbsp;<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+agent&nbsp;--&nbsp;a&nbsp;list&nbsp;containing&nbsp;coordinate&nbsp;values&nbsp;<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+floating-point&nbsp;number</tt></dd></dl>
+
+<dl><dt><a name="Agent-eat"><strong>eat</strong></a>(self)</dt><dd><tt><a href="#Agent">Agent</a>&nbsp;'eats'&nbsp;10&nbsp;units,&nbsp;storing&nbsp;them&nbsp;within&nbsp;itself,&nbsp;and&nbsp;removing&nbsp;<br>
+them&nbsp;from&nbsp;the&nbsp;environment&nbsp;where&nbsp;the&nbsp;agent&nbsp;is&nbsp;positioned&nbsp;IF&nbsp;the&nbsp;<br>
+environment&nbsp;has&nbsp;a&nbsp;value&nbsp;larger&nbsp;than&nbsp;10&nbsp;at&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;agent.</tt></dd></dl>
+
+<dl><dt><a name="Agent-getx"><strong>getx</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-gety"><strong>gety</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-move"><strong>move</strong></a>(self, speed)</dt><dd><tt>Moves&nbsp;the&nbsp;agent&nbsp;one&nbsp;step&nbsp;in&nbsp;the&nbsp;y&nbsp;and&nbsp;x&nbsp;direction,&nbsp;as&nbsp;well&nbsp;as&nbsp;<br>
+running&nbsp;the&nbsp;eat&nbsp;function&nbsp;as&nbsp;many&nbsp;times&nbsp;as&nbsp;determined&nbsp;by&nbsp;'speed'.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+speed&nbsp;--&nbsp;integer</tt></dd></dl>
+
+<dl><dt><a name="Agent-setx"><strong>setx</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="Agent-sety"><strong>sety</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="Agent-share_with_neighbours"><strong>share_with_neighbours</strong></a>(self, neighbourhood)</dt><dd><tt><a href="#Agent">Agent</a>&nbsp;shares&nbsp;its&nbsp;store&nbsp;if&nbsp;another&nbsp;agent&nbsp;is&nbsp;located&nbsp;within&nbsp;its<br>
+neighbourhood.<br>
+&nbsp;<br>
+Store&nbsp;is&nbsp;shared&nbsp;by&nbsp;taking&nbsp;the&nbsp;sum&nbsp;of&nbsp;both&nbsp;agents'&nbsp;stores&nbsp;and&nbsp;<br>
+allocating&nbsp;each&nbsp;agent&nbsp;half&nbsp;of&nbsp;the&nbsp;sum.&nbsp;<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+neighbourhood&nbsp;--&nbsp;number&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;distance&nbsp;from&nbsp;the&nbsp;agent&nbsp;defining&nbsp;the&nbsp;neighbourhood</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>I'm&nbsp;the&nbsp;'x'&nbsp;property.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>I'm&nbsp;the&nbsp;'y'&nbsp;property.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

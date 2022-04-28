@@ -41,7 +41,7 @@ with open('in.txt', newline='') as f:
 default_num_of_agents = 10
 default_num_of_iterations = 100
 default_neighbourhood = 20
-default_stopping_condition = 5000
+default_stopping_condition = 50000
 
 try:
     num_of_agents = int(sys.argv[1])

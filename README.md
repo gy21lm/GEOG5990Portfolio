@@ -23,6 +23,7 @@ If model.py is run as it is (e.g. in an IDE (Spyder)), then default paramaters w
 
 The model paramaters can be changed without changing the source code defaults by running model.py in the command prompt as follows:
 * python model.py num_of_agents num_of_iterations neighbourhood stopping_condition
+
 All arguments in the above line should be integers. In the case that an integer wasn't passed or nothing was passed at all, then the model will run using the default parameters. 
 
 ## DEVELOPMENT ISSUES 
@@ -32,4 +33,5 @@ There are two known issues with model.py:
 2. When running the model.py, two windows will pop up instead of only one. Closing the Figure window before running the model in the GUI (Model) doesn't allow the animation to to be displayed within the GUI. Therefore, until the problem is fixed, keep both windows open to show the animation of the model in the GUI.
 
 A third issue will materialise when changing the model parameters:
+
 3. Some comibiations of model parameters will cause the animation to take a very large amount of time to complete. Future development of the code could look at also limiting the length of time the animation can take. 
